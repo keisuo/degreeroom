@@ -1,15 +1,20 @@
 
 开发环境： Anaconda3(64-bit) Scrapy
+
 IDE :PyCharm
+
 参考网文:
+
 http://studyai.site/2016/11/30/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%EF%BC%881%EF%BC%89-%E6%90%9C%E6%88%BF%E7%BD%91%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/
 http://studyai.site/2016/11/30/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%EF%BC%881%EF%BC%89-%E6%90%9C%E6%88%BF%E7%BD%91%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/
 http://studyai.site/2016/12/15/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%EF%BC%883%EF%BC%89-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/
 
 代码执行:
+
 crapy crawl degreeroom
 
 R 展现:
+
 library(mongolite)
 con <- mongo("soufang",url="mongodb://192.168.59.105:27017/soufang")
 mydata <- con$find()
