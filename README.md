@@ -44,3 +44,29 @@ myGbData <- con_gb_publis_time$find(sort='{"publish_date":-1}')
 barplot(height=as.numeric(myGbData$avg),table(myGbData$publish_date))
 
 plot(x<-as.numeric(gsub('-','',myGbData$publish_date)),y<-as.numeric(myGbData$avg),type="o")
+
+---阿里云建表脚本----------------------------------------------------------------------------------------
+
+CREATE TABLE t_degreeroom
+(
+    url STRING COMMENT 'url'
+    ,title STRING COMMENT '标题'
+    ,total_price STRING COMMENT '总价(单位:万)'
+    ,hu_xin STRING COMMENT '户型'
+    ,mian_ji STRING COMMENT '面积'
+    ,unit_price STRING COMMENT '单价'
+    ,chao_xiang STRING COMMENT '朝向'
+    ,lou_ceng STRING COMMENT '楼层'
+    ,zhuang_xiu STRING COMMENT '装修'
+    ,xiao_qu STRING COMMENT '小区'
+    ,qu_yu STRING COMMENT '区域'
+    ,xue_xiao STRING COMMENT '小学'
+    ,jianzu_year STRING COMMENT '建筑年份'
+    ,id STRING COMMENT '搜房房屋ID'
+    ,publish_date STRING COMMENT '发布日期'
+    ,core_maidian STRING COMMENT '核心卖点'
+    ,imgs STRING COMMENT '图片'
+)
+COMMENT '学位房'
+;
+
