@@ -90,3 +90,6 @@ imgs STRING COMMENT '图片'
 
 COMMENT '学位房'
 ;
+
+----上传到阿里云
+tunnel upload xxx t_degreeroom -fd '","' -rd '\n' -c 'utf-8';
