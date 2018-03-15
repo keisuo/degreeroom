@@ -45,6 +45,30 @@ barplot(height=as.numeric(myGbData$avg),table(myGbData$publish_date))
 
 plot(x<-as.numeric(gsub('-','',myGbData$publish_date)),y<-as.numeric(myGbData$avg),type="o")
 
+library(sqldf)
+newdata2 <-sqldf::sqldf("select * from mydata where xue_xiao='市桥中心小学'")
+
+newdata3 <-sqldf::sqldf("select xue_xiao,avg(total_price/mian_ji) from mydata group by xue_xiao")
+newdata3
+
+newdata4 <-sqldf::sqldf("select xue_xiao,count(*) from mydata group by xue_xiao")
+newdata4
+
+
+#write.csv(mydata, file="D:/bear.csv")
+
+#mydata$unit_price=as.numeric(mydata$total_price)/as.numeric(mydata$mian_ji)
+
+mydata$hu_xin_new=substr(mydata$hu_xin,1,4) 
+
+attach(mydata)
+
+tapply(unit_price,list(xiao_qu,hu_xin),mean)
+
+detach(mydata)
+
+
+
 ---阿里云建表脚本----------------------------------------------------------------------------------------
 CREATE TABLE t_degreeroom
 
