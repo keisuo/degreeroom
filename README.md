@@ -4,6 +4,7 @@
 IDE :PyCharm
 
 参考网文:
+https://piaosanlang.gitbooks.io/spiders/01day/README1.html
 
 http://studyai.site/2016/11/30/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%EF%BC%881%EF%BC%89-%E6%90%9C%E6%88%BF%E7%BD%91%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/
 
